@@ -45,9 +45,10 @@ nav ul li a:hover {
 .container {
     width: 90%;
     max-width: 1200px;
-    margin-top: 100px;
+    margin: 100px auto; /* Margin otomatis untuk menempatkan elemen di tengah */
     overflow: hidden;
     padding: 2rem;
+    box-sizing: border-box; /* Menjaga padding dalam ukuran elemen */
 }
 .btn {
     display: inline-block;

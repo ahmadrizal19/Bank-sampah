@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerakan Sedekah Sampah/Bank Sampah</title>
+    <title>Kelompok 4 - Bank Sampah</title>
     <link rel="icon" href="assets/iconsampah.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>Gerakan Sedekah Sampah/Bank Sampah</h1>
+        <h1>Informasi Kegiatan Bank Sampah</h1>
         <nav>
             <ul>
                 <li><a href="#home">Beranda</a></li>
                 <li><a href="#about">Tentang</a></li>
-                <li><a href="#donate">Donasi</a></li>
+                <li><a href="#kegiatan">Kegiatan</a></li>
                 <li><a href="#contact">Kontak</a></li>
             </ul>
         </nav>
@@ -22,7 +22,7 @@
     <div class="container">
         <section id="home">
             <div class="card">
-                <h2>Selamat Datang di Gerakan Sedekah Sampah/Bank Sampah</h2>
+                <h2>Selamat Datang di Web Informasi Kegiatan Bank Sampah</h2>
                 <p>Mari bersama-sama menjaga lingkungan dengan mengelola sampah secara bijak dan bertanggung jawab!</p>
             </div>   
         </section>
@@ -63,7 +63,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="kegiatan">
             <div class="card">
                 <h2>Kegiatan Bank Sampah Di Lingkungan Sekitar</h2>
                 <p> 
@@ -78,31 +78,18 @@
                     <img src="assets/Gambar 9.jpeg"> 
                     <img src="assets/Gambar 10.jpeg">
                     Proses loading sampah yang sudah di timbang ke truck  
-            </div>
-        </section>
-
-        <section id="donate">
-            <div class="card">
-                <h2>Donasi Sampah</h2>
-                <p>Anda dapat menyumbangkan sampah daur ulang Anda di sini. Isi formulir di bawah untuk mengatur penjemputan sampah dari rumah Anda.</p>
-                <div id="donation-form">
-                    <h3>Formulir Donasi Sampah</h3>
-                    <form id="sampah-form">
-                        <label for="nama">Nama:</label><br>
-                        <input type="text" id="nama" name="nama" required><br>
-                        <label for="alamat">Alamat:</label><br>
-                        <input type="text" id="alamat" name="alamat" required><br>
-                        <label for="jenis-sampah">Jenis Sampah:</label><br>
-                        <select id="jenis-sampah" name="jenis-sampah">
-                            <option value="plastik">Plastik</option>
-                            <option value="kertas">Kertas</option>
-                            <option value="logam">Logam</option>
-                            <option value="elektronik">Elektronik</option>
-                        </select><br>
-                        <label for="berat">Perkiraan Berat (kg):</label><br>
-                        <input type="number" id="berat" name="berat" min="1" required><br><br>
-                        <input type="submit" value="Kirim" class="btn">
-                    </form>
+                </p>
+                <button id="showVideoBtn" class="btn">Tampilkan Video Kegiatan</button>
+                <div id="videoContainer" style="display:none; margin-top: 20px;">
+                    <video width="100%" controls>
+                        <source src="assets/Video 1.mp4" type="video/mp4">
+                    </video>
+                    <video width="100%" controls>
+                        <source src="assets/Video Kegiatan 1.mp4" type="video/mp4">
+                    </video>
+                    <video width="100%" controls>
+                        <source src="assets/Video Kegiatan 3.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </section>
@@ -117,21 +104,8 @@
         </section>
     </div>
     <footer>
-        <p>&copy; 2024 Gerakan Sedekah Sampah. All Rights Reserved.</p>
+        <p>&copy; 2024 Informasi Kegiatan Bank Sampah. All Rights Reserved.</p>
     </footer>
-    <script>
-        document.getElementById('sampah-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            var nama = document.getElementById('nama').value;
-            var alamat = document.getElementById('alamat').value;
-            var jenisSampah = document.getElementById('jenis-sampah').value;
-            var berat = document.getElementById('berat').value;
-            
-            alert('Terima kasih, ' + nama + '! Donasi sampah ' + jenisSampah + ' seberat ' + berat + ' kg akan dijemput di ' + alamat + '. Kami akan menghubungi Anda segera.');
-            
-            // Reset form
-            this.reset();
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>

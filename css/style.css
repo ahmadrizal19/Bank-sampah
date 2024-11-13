@@ -152,6 +152,34 @@ input[type="submit"]:hover {
     border-radius: 10px;
 }
 
+/* Styling untuk anggota */
+.members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Agar anggota berada di tengah */
+    margin-bottom: 20px;
+}
+
+.member {
+    text-align: center;
+    width: calc(25% - 20px); /* 4 anggota per baris di layar besar */
+    max-width: 150px; /* Batas maksimal lebar agar seragam */
+}
+
+.member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+    margin-bottom: 10px;
+}
+
+.member p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     nav ul li {

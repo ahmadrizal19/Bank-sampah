@@ -109,7 +109,7 @@ footer {
 }
 
 .card img {
-    width: 100%;
+    width: 50%;
     border-radius: 10px;
 }
 
@@ -137,6 +137,19 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #1e8449;
+}
+.image-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.image-row img {
+    width: calc(50% - 5px); /* Mengatur lebar agar dua gambar muat dalam satu baris */
+    border-radius: 10px;
 }
 
 /* Responsive Design */

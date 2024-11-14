@@ -116,32 +116,47 @@ footer {
     border-radius: 10px;
 }
 
-/* Styling untuk anggota */
+/* Contact Section */
+#contact {
+    padding: 40px;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #333;
+}
+
 .members {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     gap: 20px;
-    justify-content: center; /* Agar anggota berada di tengah */
-    margin-bottom: 20px;
 }
 
 .member {
+    width: 150px;
     text-align: center;
-    width: calc(25% - 20px); /* 4 anggota per baris di layar besar */
-    max-width: 150px; /* Batas maksimal lebar agar seragam */
 }
 
 .member img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.member img:hover {
+    transform: scale(1.05);
 }
 
 .member p {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
 }
 
 /* Responsive Design */
@@ -154,7 +169,8 @@ footer {
     .card {
         width: 100%;
     }
+    img {
+        width: 50%;
+    }
 }
-img {
-    width: 50%;
-}
+
